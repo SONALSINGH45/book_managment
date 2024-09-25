@@ -69,7 +69,6 @@ export class MailService {
     });
     async sendSuperAdminNotification(from: any, text: any, subject: any) {
         await this.yy.sendMail({
-            //from: 'shivam.sharma@innodeed.com',
             from,
             to: "superadmin@yopmail.com", // to: 'sonalsingh77.90z@gmail.com',
             subject,
@@ -78,7 +77,6 @@ export class MailService {
     }
     async sendadminnotification(from: any, text: any, subject: any, to) {
         await this.yy.sendMail({
-            //from: 'shivam.sharma@innodeed.com',
             from,
             to:
                 subject,
