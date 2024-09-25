@@ -15,25 +15,18 @@ export class MailService {
             port: 587, // Replace with your SMTP port
             secure: false, // true for 465, false for other ports
             auth: {
-                user: 'bookmngtest1709@gmail.com', // Replace with your SMTP username
+                user: '@gmail.com', // Replace with your SMTP username
                 pass: '@Surbhi@500', // Replace with your SMTP password
             },
         });
     }
 
 
-    // private mg: mailgun.Mailgun;
 
-    // constructor() {
-    //     this.mg = mailgun({
-    //         apiKey: "a6125d95fdbb754cb31f65334f622bea-1b5736a5-d87ffcdf", // Your Mailgun API key
-    //         domain: 'test@sandbox5a6cffc36c1445a19babac47c539809b.mailgun.org', // Your Mailgun domain
-    //     });
-    // }
 
     async sendEmailm(to: string, subject: string, text: string): Promise<void> {
         const data = {
-            from: 'test@sandbox5a6cffc36c1445a19babac47c539809b.mailgun.org',
+            from: '',
             to,
             subject,
             text,
@@ -42,7 +35,7 @@ export class MailService {
 
         await this.transporter.messages().send(data);
     }
-    // private yy = nodemailer.createTransport({
+
     //     service: "gamil",
     //     host: 'smtp-relay.brevo.com',
 
@@ -60,8 +53,8 @@ export class MailService {
 
 
     private yy = nodemailer.createTransport({
-        host: 'smtp-relay.brevo.com',
-        port: 587,
+        host: '***',
+        port: "***",
         auth: {
             user: '****', // Replace with your SMTP username
             pass: '***', // Replace with your SMTP password
